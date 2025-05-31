@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ori te amo</title>
+    <style>
+        body {
+            background-color: #001f3d; /* Azul marino */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            color: #fff; /* Texto blanco */
+            height: 100vh; /* Asegura que el body ocupe toda la altura */
+        }
+        .titulo {
+            font-size: 36px;
+            color: #FF0000;
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .corazon {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-color: #FF0000;
+            transform: rotate(45deg);
+            cursor: pointer;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            animation: latir 1s ease-in-out infinite; /* Animación de latir */
+        }
+        .corazon::before,
+        .corazon::after {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-color: #FF0000;
+            border-radius: 50%;
+        }
+        .corazon::before {
+            top: -125px;
+            left: 0;
+        }
+        .corazon::after {
+            left: 125px;
+            top: 0;
+        }
+        .cartita {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            font-size: 24px;
+            text-align: center;
+            border-top: 10px solid #FF0000;
+            z-index: 999;
+        }
+        .cartita h2 {
+            font-size: 28px;
+            color: #FF0000;
+        }
+        .cartita p {
+            font-size: 18px;
+            color: #333;
+        }
+        .cerrar-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .cerrar-btn:hover {
+            background-color: #d10000;
+        }
+
+        /* Animación para el efecto de latir */
+        @keyframes latir {
+            0% {
+                transform: translate(-50%, -50%) rotate(45deg) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) rotate(45deg) scale(1.1);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(45deg) scale(1);
+            }
+        }
+
+        /* Diseño responsivo para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .titulo {
+                font-size: 28px;
+            }
+            .cartita {
+                width: 90%;
+                padding: 20px;
+                font-size: 18px;
+            }
+            .corazon {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* Ajuste para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            .titulo {
+                font-size: 24px;
+            }
+            .cartita {
+                width: 85%;
+                padding: 15px;
+                font-size: 16px;
+            }
+            .corazon {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Ori te amo</h1>
+
+    <!-- Corazón grande -->
+    <div class="corazon" onclick="mostrarCartita()"></div>
+
+    <div class="cartita" id="cartita">
+        <h2>Mi querida Ori</h2>
+        <p>Ni con un millón de eternidades, podré todo el amor que tengo por ti, ya que mi amor por ti es infinito.</p>
+        <button class="cerrar-btn" onclick="cerrarCartita()">Cerrar</button>
+    </div>
+
+    <script>
+        // Función para mostrar la cartita
+        function mostrarCartita() {
+            document.getElementById("cartita").style.display = "block";
+        }
+
+        // Función para cerrar la cartita
+        function cerrarCartita() {
+            document.getElementById("cartita").style.display = "none";
+        }
+    </script>
+</body>
+</html>

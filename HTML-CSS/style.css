@@ -1,0 +1,37 @@
+*{
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;                                                                   font-family: 'Caslon Antique', sans-serif;
+text-align: center;                                   
+}
+html{
+font-size: 100px;
+background-color:black;
+
+}
+   .btn-primary {
+    background-color: #161616; /* Red-500 */
+    color: rgb(255, 0, 0);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    text-align: center;
+  }
+
+  .btn-primary:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);}
+    
+    img{
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .hidden{display: none;}

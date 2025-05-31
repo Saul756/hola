@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popo</title>
+
+    <link href="style.css" rel="stylesheet">
+    <style>
+       @import url('https://fonts.cdnfonts.com/css/caslon-antique');
+    </style>
+                
+
+</head>
+<body>
+<button onclick="mostrarImagen()" class="btn-primary">Toca aqui</button>
+
+<img id="Foto" width="300px" class="hidden" src="https://static.wikia.nocookie.net/random/images/5/59/Milly.png/revision/latest?cb=20240930164608&path-prefix=es">
+<audio id="peito" src="/Users/chavalos/Desktop/kaka popo/Fotos/Fart - Gaming Sound Effect (HD)-[AudioTrimmer.com].mp3"></audio>
+<script> function mostrarImagen() {
+      const imagen = document.getElementById("Foto");
+      imagen.classList.remove("hidden");
+    const sonido = document.getElementById("peito")
+    sonido.currentTime = 0;
+    sonido.play();
+    }</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
